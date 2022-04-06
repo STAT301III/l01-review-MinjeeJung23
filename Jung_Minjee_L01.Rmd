@@ -1,0 +1,163 @@
+---
+title: "L01 Review"
+subtitle: "Data Science 3 with R (STAT 301-3)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: "tango"
+---
+
+## Overview
+
+The goal of this lab is to review vocabulary and concepts from the Data Science 2 with R (STAT 301-2).
+
+## Questions
+
+When completing the following questions ensure that that your solutions are clearly indicated and that your document is neatly formatted. Consider including diagrams that in some of your answers since it might make things easier to describe. 
+
+
+### Question 1
+
+Provide a brief outline/overview of the steps involved in a supervised machine learning process. Could provide this as a bulleted list. 
+
+- exploratory data analysis (EDA) - back and forth between numerical analysis and visualization of the data where different discoveries lead to more questions and data analysis
+- feature engineering - creation of specific model terms that make it easier to accurately model the observed data
+- model tuning and selection - variety of models are generated and their performance is compared; some models require parameter tuning
+- model evaluation - assess the model’s performance metrics, examine residual plots, and conduct other EDA-like analyses to understand how well the models work
+
+<br>
+
+### Question 2
+
+Explain the difference between supervised and unsupervised learning.
+
+supervised learning = models with have an outcome variable
+<br>
+unsupervised learning = models that learn patterns, clusters, and other characteristics of the data but lack an outcome
+
+<br>
+
+### Question 3 
+
+In general, we can classify a model by its purpose into 1 of the 3 categories below. Provide a brief description of the goals of these model classes.
+
+1. Descriptive Models: purpose is to describe or illustrate characteristics of some data
+
+2. Inferential Models: purpose is to produce a decision for a research question or to test a specific hypothesis
+
+3. Predictive Models: purpose is to produce the most accurate prediction possible for new data; primary goal is that the predictive values have the highest possible fidelity to the true value of the data
+
+<br>
+
+### Question 4 
+
+We can further describe/classify predictive models by how they were derived or developed as being either mechanistic or empirically driven. 
+
+#### Part A
+What does it mean to be a mechanistic model?
+
+A mechanistic model can be derived using first principles to produce a model equation that is dependent on assumptions
+
+#### Part B
+What does it mean to be an empirically driven model?
+
+Empirically driven models are created with more vague assumptions and fall into the machine learning category
+
+#### Part C
+How does the mechanistic and empirically driven model terminology relate to the parametric and nonparametric model terminology? 
+
+Mechanistic models are considered parametric as parametric models require determining and tuning parameters and are dependent on the assumption about the functional form of the model
+<br>
+Empirically driven models are considered nonparametric as nonparametric models can be seen as function approximation that acts as close to the data points as possible
+
+#### Part D
+In general, is a mechanistic or empirically driven model easier to understand? Explain.
+
+Mechanistically driven models are easier to understand because they are based on a few assumptions and are easier to understand the output from the model. 
+<br>
+Empirically driven models are hard to understand because they are based solely on data and so sometimes it is unclear how the output of the model was produced and predicted
+
+#### Part E
+How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
+
+Mechanistically driven models are more flexible because they can be used to make good predictions outside the range of the data that was initially used to create the model. Empirically driven models do not have this flexibility and only work well for the specific data set that was used to create the model. 
+
+#### Part F
+Describe the bias-variance trade-off when considering the use of a mechanistic or empirically driven model. 
+
+There is a tradeoff between the bias and variance so the higher the bias, the lower the variance. Empirically driven models have a low variance and high bias since these models have a more biased fit and have better predictive power. Mechanistic driven models have a high variance and low bias so they fit the curve too closely to a data set.
+
+<br>
+
+### Question 5 
+
+Explain the difference between a regression and classification machine learning (ML) problems.
+
+Both are sub-categories of supervised models. but regression models predicts a numeric outcome while classification models predict an outcome that is an ordered or unordered set of qualitative values
+
+<br>
+
+### Question 6 
+
+When splitting the data, why is it useful to stratify by the outcome/target variable? 
+
+It is useful to stratify by the outcome variable when there is a dramatic class imbalance in classification problems. The training/test split is conducted separately within each class and then the subsamples are combined. 
+
+<br>
+
+### Question 7 
+
+Briefly describe how v-fold cross validation with repeats is used to estimate test RMSE. Also provide an explanation of why we use it. 
+
+When doing a v-fold cross validation with repeats, this means that v number of separate models are fit on the analysis and assesment sets to produce v sets of performance statistics. The final estimate of performance for a model is the average of the v replicates of the statistics. We use this cross validation because this average has very good generalization properties and is far better than resubstitution estimates. 
+
+<br>
+
+### Question 8
+
+When might we use a bootstrap resampling procedure instead of v-fold cross validation to estimate test RMSE?
+
+We might want to use bootstrap resampling procedures instead of v-fold cross validation when we want more bias since bootstrap resampling provides more bias and v-fold cross validation provides more varience. 
+
+<br>
+
+### Question 9 
+
+Briefly describe model tuning and why we use it.
+
+Model tuning is when you change tuning parameters to maximize the model's accuracy. We use it because it creates a more accurate model that fits the data better so that a better prediction is made based on that model. 
+
+<br>
+
+### Question 10 
+
+What are two common performance metrics when dealing with a regression ML problem?
+
+RMSE and R*^2^*
+
+What are two common performance metrics when dealing with a classification ML problem?
+
+ROC curve and area under the ROC curve
+
+<br>
+
+### Question 11
+
+A political candidate's campaign has detailed voter history data for their constituents. The campaign is interested in two questions:
+
+1. Given a voter's profile/data how likely is it that they will vote in favor of the candidate?
+
+Predictive because the problem is aiming to predict voter's tendency to favor a candidate based on profile/data
+
+1. How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?
+
+Inferential because the problem is aiming to answer a hypothesis that personal contact with a candidate will increase or decrease the support for the candidate
+
+Classify each question/problem as either prediction or inferential. Explain your reasoning for each.
+
+<br>
+
+## Github Repo Link
+
+[YOUR GITHUB URL](https://github.com/STAT301III/l01-review-MinjeeJung23.git){target="_blank"}
